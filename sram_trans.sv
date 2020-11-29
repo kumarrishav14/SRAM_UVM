@@ -1,6 +1,4 @@
-`include "uvm_macros.svh"
 import uvm_pkg::*;
-
 class transaction extends uvm_sequence_item;
 
     // data that needs to be sent
@@ -41,7 +39,7 @@ class transaction extends uvm_sequence_item;
     endfunction
 endclass //transaction extends uvm_sequence_item
 
-module top;
+/* module top;
     transaction trans, trans_copy;
 
     initial begin
@@ -56,4 +54,4 @@ module top;
     initial begin
         run_test();
     end
-endmodule
+endmodule */
