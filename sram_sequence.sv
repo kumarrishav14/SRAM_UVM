@@ -1,20 +1,23 @@
-//import uvm_pkg::*;
+import uvm_pkg::*;
 
 class ram_sequence extends uvm_sequence;
     `uvm_object_utils(ram_sequence)
     transaction trans;
+    int num = 10;
+    
     function new(string name = "ram_sequence");
         super.new(name);
+        void'(uvm_config_db#(int)::get(null, "seq", "no_pckt", num));
     endfunction //new()
-
-    function void build_phase(uvm_phase phase);
-        `uvm_info("DEBUG", "Building sequence", UVM_DEBUG);
-        //trans = transaction::type_id::create("trans");
-    endfunction
-    const int num = 10;
+    
+    task pre_body();
+        `uvm_info("DEBUG", "Starting sequence", UVM_DEBUG);
+        trans = transaction::type_id::create("trans");
+    endtask;
+   
     task body();
-        for (int i=0; i<num; i++) begin
-            trans = transaction::type_id::create("trans");
+        for (int i=0; i< num; i++) begin
+            //trans = transaction::type_id::create("trans");
             start_item(trans);
             `uvm_info(get_type_name(), "Generating new item: ", UVM_MEDIUM);
             if(!trans.randomize())
