@@ -3,7 +3,6 @@
 In this project, **UVM** testbench for a simple *SRAM* isimplemented.
 
 ### Acrhitrcture
-![image](image\SRAM_UVM_TB.png)
 ![image](image\SRAM_UVM_TB_2.png)
 
 ### Components of Test Bench
