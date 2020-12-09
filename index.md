@@ -2,29 +2,20 @@
 
 In this project, **UVM** testbench for a simple *SRAM* isimplemented.
 
-### Components of Test Bench
-1. Transaction Item
-2. Sequence
-3. Agent    
-    3.1 Sequencer   
-    3.2 Driver  
-    3.3 Monitor
-4. Scoreboard
-5. Functional Coverage Subscriber
-6. Reference Model
-7. Envirnonment
-8. Test
-9. Test bench top
-
 ### Acrhitrcture
-![image](image\ALU_tb_arch.png)
+![image](image\SRAM_UVM_TB.png)
+![image](image\SRAM_UVM_TB_2.png)
 
-
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kumarrishav14/SRAM_UVM/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### Components of Test Bench
+1. Transaction - Encapsulates the packet level details
+2. Sequence - Generates random packets which will be driven by driver
+3. Sequencer - Synchorises the sequence generation and driving of packet 
+4. Driver - Drives the packet to the SRAM
+5. Monitor - Monitors the input and ouput signals to and from the DUT 
+6. Agent - Encapsulates _Sequncer_, _Driver_, _Monitor_ into one unit. Also, estabilishes connection between _Sequencer_ and _Driver_
+7. Reference Model - Generates reference o/p values for the input signals sampled by _Monitor_.
+6. Scoreboard - Compares the actual o/p with the reference o/p from _Reference Model_
+5. Functional Coverage Subscriber - This is a subscriber block which sample the data collected by _Monitor_ to determine the funciton coverage.
+7. Envirnonment - Encapuslates all the the lower level components into one unit. Also estabilishes connection between _Monitor_-_Scoreboard_  _Monitor_-_Functional Coverage Subscriber_
+8. Test - Entry point of the test.
+9. Test bench top - Connects the _DUT_ with the _Test_ through interface
