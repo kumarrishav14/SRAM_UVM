@@ -18,3 +18,5 @@ In this project, **UVM** testbench for a simple *SRAM* isimplemented.
 7. Envirnonment - Encapuslates all the the lower level components into one unit. Also estabilishes connection between _Monitor_-_Scoreboard_  _Monitor_-_Functional Coverage Subscriber_
 8. Test - Entry point of the test.
 9. Test bench top - Connects the _DUT_ with the _Test_ through interface
+
+### Test
