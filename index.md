@@ -1,32 +1,25 @@
-## Welcome to SRAM Project Page
+# Welcome to SRAM Project Page
 
-In this Project i have implemented a UVM testbench for a simple SRAM
+### In this project, **UVM** testbench for a simple *SRAM* isimplemented.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Components of Test Bench
+1. Transaction Item
+2. Sequence
+3. Agent    
+    3.1 Sequencer   
+    3.2 Driver  
+    3.3 Monitor
+4. Scoreboard
+5. Functional Coverage Subscriber
+6. Reference Model
+7. Envirnonment
+8. Test
+9. Test bench top
 
-### Markdown
+## Acrhitrcture
+![image](image\ALU_tb_arch.png)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ### Jekyll Themes
 
