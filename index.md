@@ -1,8 +1,8 @@
-# Welcome to SRAM Project Page
+## Welcome to SRAM Project Page
 
-### In this project, **UVM** testbench for a simple *SRAM* isimplemented.
+In this project, **UVM** testbench for a simple *SRAM* isimplemented.
 
-## Components of Test Bench
+### Components of Test Bench
 1. Transaction Item
 2. Sequence
 3. Agent    
@@ -16,7 +16,7 @@
 8. Test
 9. Test bench top
 
-## Acrhitrcture
+### Acrhitrcture
 ![image](image\ALU_tb_arch.png)
 
 
